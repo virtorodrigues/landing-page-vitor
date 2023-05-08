@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --max-width-screen: 96rem;
+  --instagram-icon-background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #fff;
+  /* background: linear-gradient(270deg,#18181b,#09090a); */
+  background: #000;
+  font-family: "Roboto", sans-serif;
+ 
+}
+
+section {
+  margin: 0 auto;
+  padding: 0 5rem;
+}
