@@ -1,13 +1,8 @@
-import { ReactElement, ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
-import {
-  IconLookup,
-  IconDefinition,
-  findIconDefinition,
-} from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 interface SocialMediaLinkProps {
   icon: IconDefinition;

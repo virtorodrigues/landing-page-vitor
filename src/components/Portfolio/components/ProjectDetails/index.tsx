@@ -3,7 +3,7 @@ import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { ReactNode, ReactElement } from "react";
+import { ReactElement } from "react";
 
 interface ProjectDetailsProps {
   name: string;

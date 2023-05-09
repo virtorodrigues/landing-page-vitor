@@ -1,10 +1,7 @@
-import { useContext } from "react";
-
 import { motion, Variants } from "framer-motion";
 import { LinkMenu } from "../Home/components/LinkMenu";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import { ThemeContext } from "@/context/ThemeContextProvider";
+import * as Switch from "@radix-ui/react-switch";
+import { useTheme } from "next-themes";
 
 const cardVariants: Variants = {
   offscreen: {
@@ -38,10 +35,10 @@ const cardVariants1: Variants = {
 };
 
 export const Header = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme } = useTheme();
 
   function handleSwitchTheme() {
-    if (theme === "dark") {
+    if (theme == "dark") {
       setTheme("light");
     } else {
       setTheme("dark");
@@ -56,7 +53,7 @@ export const Header = () => {
       className="dark:bg-black bg-white fixed w-full z-[99] border-b-2 border-blue/50 h-24 xs:px-8 lg:px-24 py-8 flex flex-row justify-between items-center"
     >
       <motion.div variants={cardVariants}>
-        <h1 className="xs:text-xl lg:text-2xl dark:text-blue">
+        <h1 className="font-bold xs:text-xl lg:text-2xl text-blue">
           Vitor Rodrigues
         </h1>
       </motion.div>
@@ -65,13 +62,13 @@ export const Header = () => {
           <LinkMenu to="home">Home</LinkMenu>
           <LinkMenu to="portfolio">Portifólio</LinkMenu>
         </nav>
-        <button onClick={handleSwitchTheme} className="xs:p-4 lg:px-8">
-          <FontAwesomeIcon
-            icon={theme == "light" ? faSun : faMoon}
-            size="2xl"
-            className={theme == "light" ? "text-yellow" : "text-blue"}
-          />
-        </button>
+
+        <Switch.Root
+          onClick={handleSwitchTheme}
+          className=" w-[42px] h-[25px] bg-blac rounded-full relative dark:bg-white bg-black data-[state=checked]:bg-black dark:data-[state=checked]:bg-white cursor-pointer"
+        >
+          <Switch.Thumb className="shadow-[0_2px_2px] transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px] block w-[21px] h-[21px] rounded-full dark:bg-black bg-white dark:data-[state=checked]:bg-black data-[state=checked]:bg-white" />
+        </Switch.Root>
       </motion.div>
     </motion.header>
   );

@@ -12,24 +12,16 @@ interface ThemeContextProviderProps {
 }
 
 export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState((initialTheme: string) => {
-    const storadStateAsJSON = localStorage.getItem(
-      "@landing-page-vitor:theme-state-1.0.0"
-    );
-
-    if (storadStateAsJSON) {
-      return JSON.parse(storadStateAsJSON);
-    }
-    return "dark";
-  });
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    const themeJSON = JSON.stringify(theme);
+    if (typeof window !== "undefined") {
+      const themeJSON = JSON.stringify(theme);
 
-    localStorage.getItem("");
-    localStorage.setItem("@landing-page-vitor:theme-state-1.0.0", themeJSON);
+      localStorage.setItem("@landing-page-vitor:theme-state-1.0.0", themeJSON);
 
-    document.documentElement.classList.add(theme);
+      document.documentElement.classList.add(theme);
+    }
   }, [theme]);
 
   function onSetTheme(newTheme: string) {

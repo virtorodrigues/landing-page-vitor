@@ -1,5 +1,4 @@
 import { motion, Variants } from "framer-motion";
-import { Header } from "../Header";
 import { IconsSection } from "./components/IconsSection";
 
 const cardVariants: Variants = {

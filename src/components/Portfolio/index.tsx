@@ -1,8 +1,4 @@
 import { motion, Variants } from "framer-motion";
-import * as AlertDialog from "@radix-ui/react-alert-dialog";
-import { faGithubAlt, faXbox } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { ProjectDetails } from "./components/ProjectDetails";
 import { igniteTimer, planningPoker, simpleFeed } from "@/portfolioProjects";
 
