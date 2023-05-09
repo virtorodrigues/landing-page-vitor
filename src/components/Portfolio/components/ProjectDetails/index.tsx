@@ -37,7 +37,10 @@ export function ProjectDetails({
             stiffness: 800,
             damping: 17,
           }}
-          className={`text-blue font-bold rounded-lg flex items-center justify-center bg-cover bg-center bg-no-repeat hover:bg-[linear-gradient(to_right_bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/${backgroundPath}')] bg-[url('/${backgroundPath}')] hover:cursor-pointer text-5xl`}
+          style={{
+            backgroundImage: `url(${backgroundPath})`,
+          }}
+          className={`text-blue font-bold rounded-lg flex items-center justify-center  bg-cover bg-center hover:cursor-pointer text-5xl`}
         >
           <div className="mt-80 w-full bg-gray-dark text-blue rounded-b-lg text-center text-lg p-2">
             ver mais
@@ -46,7 +49,7 @@ export function ProjectDetails({
       </AlertDialog.Trigger>
       <AlertDialog.Portal>
         <AlertDialog.Overlay className="h-screen w-screen fixed inset-0 bg-[#00000075]" />
-        <AlertDialog.Content className="bg-gray-dark max-w-7xl rounded-lg fixed left-2/4 top-2/4 translate-y-[-50%] translate-x-[-50%] p-10">
+        <AlertDialog.Content className="z-50 bg-gray-dark max-w-7xl rounded-lg fixed left-2/4 top-2/4 translate-y-[-50%] translate-x-[-50%] p-10">
           <AlertDialog.Title className="text-4xl font-bold">
             {name}
           </AlertDialog.Title>
