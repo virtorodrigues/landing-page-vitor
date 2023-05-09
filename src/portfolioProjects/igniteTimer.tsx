@@ -18,16 +18,6 @@ export const igniteTimer = {
         codificação e manutenção da aplicação. O{" "}
         <span className="text-blue font-bold">localStorage</span> foi utilizado
         para armazenar as informações dos ciclos de tarefas, então vai continuar
-        funcionando normalmente caso você atualize a página. foi utilizado para
-        armazenar as informações dos ciclos de tarefas, então vai continuar
-        funcionando normalmente caso você atualize a página. foi utilizado para
-        armazenar as informações dos ciclos de tarefas, então vai continuar
-        funcionando normalmente caso você atualize a página. foi utilizado para
-        armazenar as informações dos ciclos de tarefas, então vai continuar
-        funcionando normalmente caso você atualize a página. foi utilizado para
-        armazenar as informações dos ciclos de tarefas, então vai continuar
-        funcionando normalmente caso você atualize a página. foi utilizado para
-        armazenar as informações dos ciclos de tarefas, então vai continuar
         funcionando normalmente caso você atualize a página.
       </p>
     </>

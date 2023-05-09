@@ -28,7 +28,7 @@ export function ProjectDetails({
         <motion.div
           initial={{ contentVisibility: "hidden" }}
           whileHover={{
-            scale: 1.2,
+            scale: 1.1,
             contentVisibility: "visible",
             zIndex: 9999,
           }}
@@ -104,40 +104,3 @@ export function ProjectDetails({
     </AlertDialog.Root>
   );
 }
-
-/**
- * <video width="600" controls autoPlay>
-              <source src={videoPath} type="video/mp4" />
-              Your browser does not support HTML video.
-            </video>
- * 
- * 
- *   <div className="flex mt-12">
-            <a
-              href={githubRepositoryLinkRedirect}
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue transition ease-in delay-70 hover:scale-110 hover:bg-blue hover:text-black font-bold rounded-lg border-2 border-blue px-8 py-2 flex items-center"
-            >
-              <FontAwesomeIcon
-                icon={faGithubAlt}
-                size="lg"
-                className="mr-2 text-inherit"
-              />
-              Github
-            </a>
-            <a
-              href={onlineLinkRedirect}
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue ml-8 transition ease-in delay-70 hover:scale-110 hover:bg-blue hover:text-black font-bold rounded-lg border-2 border-blue px-8 py-2 flex items-center"
-            >
-              <FontAwesomeIcon
-                icon={faGlobe}
-                size="lg"
-                className="mr-2 text-inherit"
-              />
-              Ver online
-            </a>
-          </div>
- */
