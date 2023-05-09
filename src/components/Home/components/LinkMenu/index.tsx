@@ -10,8 +10,9 @@ interface LinkMenuProps {
 export function LinkMenu({ to, children }: LinkMenuProps) {
   return (
     <Link
-      className="px-8 py-4 hover:cursor-pointer hover:text-blue transition duration-200 ease-in"
+      className="xs:px-4 lg:px-8 py-4 hover:cursor-pointer hover:text-blue transition duration-200 ease-in"
       to={to}
+      offset={-80}
       spy={true}
       smooth={true}
       duration={500}

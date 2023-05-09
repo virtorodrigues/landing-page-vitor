@@ -18,10 +18,21 @@ body {
   /* background: linear-gradient(270deg,#18181b,#09090a); */
   background: #000;
   font-family: "Roboto", sans-serif;
- 
 }
 
 section {
   margin: 0 auto;
   padding: 0 5rem;
+}
+
+@media (max-width: 964px) {
+  section {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 964px) {
+  html {
+    font-size: 85%;
+  }
 }

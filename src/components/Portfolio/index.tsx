@@ -40,7 +40,7 @@ export const Portfolio = () => {
           <span className="h-1 w-32 rounded mt-2 bg-gradient-to-r from-purple to-blue" />
           <motion.div
             variants={cardVariants}
-            className="mt-24 grid grid grid-cols-3 gap-12  w-full auto-rows-[minmax(300px,_300px)]"
+            className="mt-24 grid xs:grid-cols-1 lg:grid-cols-3 gap-12  w-full auto-rows-[minmax(300px,_300px)]"
           >
             <ProjectDetails {...igniteTimer} />
             <ProjectDetails {...planningPoker} />
