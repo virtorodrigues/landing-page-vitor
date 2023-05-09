@@ -43,7 +43,7 @@ export function IconsSection() {
       </div>
 
       <motion.span
-        className="w-2 bg-white rounded-full h-2 xs:mx-0 lg:mx-8"
+        className="w-2 dark:bg-white bg-black rounded-full h-2 xs:mx-0 lg:mx-8"
         animate={{
           scale: [1, 2, 2, 1, 1],
           rotate: [0, 0, 270, 270, 0],

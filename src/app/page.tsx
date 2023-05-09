@@ -3,6 +3,7 @@
 import { Header } from "@/components/Header";
 import { Home } from "@/components/Home";
 import { Portfolio } from "@/components/Portfolio";
+import { ThemeContextProvider } from "@/context/ThemeContextProvider";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -13,9 +14,11 @@ const roboto = Roboto({
 export default function App() {
   return (
     <main className={roboto.className}>
-      <Header />
-      <Home />
-      <Portfolio />
+      <ThemeContextProvider>
+        <Header />
+        <Home />
+        <Portfolio />
+      </ThemeContextProvider>
     </main>
   );
 }

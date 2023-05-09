@@ -14,11 +14,17 @@
 }
 
 body {
-  color: #fff;
+  /* color: #fff; */
   /* background: linear-gradient(270deg,#18181b,#09090a); */
-  background: #000;
+  /* background: theme('light.background'); */
   font-family: "Roboto", sans-serif;
 }
+
+ @layer base{
+  body {
+    @apply dark:bg-black bg-white dark:text-white text-black;
+  }
+} 
 
 section {
   margin: 0 auto;

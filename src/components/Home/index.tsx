@@ -42,7 +42,7 @@ export const Home = () => {
         id="home"
         className="max-w-[var(--max-width-screen)] z-[100] h-screen"
       >
-        <div className="h-24 bg-black" />
+        <div className="h-24" />
         <motion.div
           initial="offscreen"
           whileInView="onscreen"

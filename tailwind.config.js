@@ -5,15 +5,8 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
-    dark: {
-      background: '#000',
-      color: '#FFF'
-    },
-    light: {
-      background: '#FFF',
-      color: '#000'
-    },
     screens: {
       xs: '200px',
       sm: '480px',
@@ -23,7 +16,7 @@ module.exports = {
     },
     colors: {
       'white': '#FFF',
-      'black': '#000',
+      'black': '#1C1C1C',
       'blue': '#1fb6ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
