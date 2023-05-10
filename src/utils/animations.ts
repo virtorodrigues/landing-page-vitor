@@ -11,6 +11,7 @@ export const animationVariantLeftToRight: Variants = {
     transition: {
       type: "spring",
       bounce: 0,
+      duration: 1,
     },
   },
 };
@@ -27,6 +28,7 @@ export const animationVariantRightToLeft: Variants = {
     transition: {
       type: "spring",
       bounce: 0,
+      duration: 1,
     },
   },
 };

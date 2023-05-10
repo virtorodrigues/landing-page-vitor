@@ -23,7 +23,6 @@ export function LinkMenu({ to, children }: LinkMenuProps) {
         transition={{
           type: "spring",
           stiffness: 400,
-          damping: 10,
           duration: 2,
         }}
       >
