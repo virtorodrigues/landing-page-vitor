@@ -1,9 +1,10 @@
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { ReactElement } from "react";
+import { animationVariantLeftToRight } from "@/utils/animations";
 
 interface ProjectDetailsProps {
   name: string;
@@ -26,7 +27,10 @@ export function ProjectDetails({
     <AlertDialog.Root>
       <AlertDialog.Trigger asChild>
         <motion.div
-          initial={{ contentVisibility: "hidden" }}
+          initial={"offscreen"}
+          whileInView="onscreen"
+          variants={animationVariantLeftToRight}
+          viewport={{ once: true, amount: 0.05 }}
           whileHover={{
             scale: 1.1,
             contentVisibility: "visible",

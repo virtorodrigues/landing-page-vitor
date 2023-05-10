@@ -1,38 +1,9 @@
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { IconsSection } from "./components/IconsSection";
-
-const cardVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-    x: -50,
-  },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 2,
-    },
-  },
-};
-
-const imgVariants: Variants = {
-  offscreen: {
-    x: 50,
-    opacity: 0,
-  },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-
-    transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 2,
-    },
-  },
-};
+import {
+  animationVariantLeftToRight,
+  animationVariantRightToLeft,
+} from "@/utils/animations";
 
 export const Home = () => {
   return (
@@ -49,7 +20,7 @@ export const Home = () => {
           className="flex items-center h-[calc(100vh-6rem)] xs:flex-col-reverse lg:flex-row xs:justify-center lg:justify-between"
         >
           <motion.div
-            variants={cardVariants}
+            variants={animationVariantLeftToRight}
             className="xs:max-screen lg:max-w-lg xs:mt-12 lg:mt-0"
           >
             <h1 className="xs:text-center lg:text-left xs:text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -66,7 +37,7 @@ export const Home = () => {
 
           <motion.img
             className="rounded-full lg:h-96 xs:h-72 xs:pl-0 lg:pl-12"
-            variants={imgVariants}
+            variants={animationVariantRightToLeft}
             src="/vitor-rodrigues.jpg"
             alt="Minha foto"
           />

@@ -1,44 +1,18 @@
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { LinkMenu } from "../Home/components/LinkMenu";
 import * as Switch from "@radix-ui/react-switch";
 import { useTheme } from "next-themes";
-
-const cardVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-    x: -50,
-  },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 2,
-    },
-  },
-};
-const cardVariants1: Variants = {
-  offscreen: {
-    opacity: 0,
-    x: 50,
-  },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 2,
-    },
-  },
-};
+import {
+  animationVariantLeftToRight,
+  animationVariantRightToLeft,
+} from "@/utils/animations";
 
 export const Header = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
+  const currentTheme = theme == "system" ? systemTheme : theme;
 
   function handleSwitchTheme() {
-    if (theme == "dark") {
+    if (currentTheme == "dark") {
       setTheme("light");
     } else {
       setTheme("dark");
@@ -49,15 +23,18 @@ export const Header = () => {
     <motion.header
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0 }}
       className="dark:bg-black bg-white fixed w-full z-[99] border-b-2 border-blue/50 h-24 xs:px-8 lg:px-24 py-8 flex flex-row justify-between items-center"
     >
-      <motion.div variants={cardVariants}>
+      <motion.div variants={animationVariantLeftToRight}>
         <h1 className="font-bold xs:text-xl lg:text-2xl text-blue">
           Vitor Rodrigues
         </h1>
       </motion.div>
-      <motion.div variants={cardVariants1} className="flex items-center">
+      <motion.div
+        variants={animationVariantRightToLeft}
+        className="flex items-center"
+      >
         <nav className="flex">
           <LinkMenu to="home">Home</LinkMenu>
           <LinkMenu to="portfolio">Portifólio</LinkMenu>
