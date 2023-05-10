@@ -24,6 +24,10 @@ export const Header = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
+      transition={{
+        type: "spring",
+        duration: 1,
+      }}
       className="dark:bg-black bg-white fixed w-full z-[99] border-b-2 border-blue/50 h-24 xs:px-8 lg:px-24 py-8 flex flex-row justify-between items-center"
     >
       <motion.div variants={animationVariantLeftToRight}>

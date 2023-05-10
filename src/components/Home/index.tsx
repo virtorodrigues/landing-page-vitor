@@ -17,6 +17,7 @@ export const Home = () => {
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, type: "spring" }}
           className="flex items-center h-[calc(100vh-6rem)] xs:flex-col-reverse lg:flex-row xs:justify-center lg:justify-between"
         >
           <motion.div

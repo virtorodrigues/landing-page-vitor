@@ -24,7 +24,7 @@ export const Portfolio = () => {
             initial="offscreen"
             whileInView="onscreen"
             variants={animationVariantLeftToRight}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             className="text-6xl font-bold"
           >
             Projetos
@@ -34,7 +34,7 @@ export const Portfolio = () => {
             initial="offscreen"
             whileInView="onscreen"
             variants={animationVariantLeftToRight}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             className="xs:mt-12 lg:mt-24 grid xs:grid-cols-1 lg:grid-cols-3 gap-12  w-full auto-rows-[minmax(300px,_300px)]"
           >
             <ProjectDetails {...igniteTimer} />
