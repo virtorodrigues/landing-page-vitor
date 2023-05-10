@@ -3,7 +3,9 @@ import { IconsSection } from "./components/IconsSection";
 import {
   animationVariantLeftToRight,
   animationVariantRightToLeft,
-} from "@/utils/animations";
+} from "@/utils/AnimationsConst";
+import { Balancer } from "react-wrap-balancer";
+import { AnimationSVG } from "@/utils/AnimationSVG";
 
 export const Home = () => {
   return (
@@ -19,17 +21,25 @@ export const Home = () => {
           viewport={{ once: true, amount: 0.5 }}
           className="flex items-center h-[calc(100vh-6rem)] xs:flex-col-reverse lg:flex-row xs:justify-center lg:justify-between"
         >
+          <div className="fixed z-[-1] top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
+            <AnimationSVG />
+          </div>
+
           <motion.div
             variants={animationVariantLeftToRight}
             className="xs:max-screen lg:max-w-lg xs:mt-12 lg:mt-0"
           >
             <h1 className="xs:text-center lg:text-left xs:text-3xl md:text-4xl lg:text-5xl font-bold">
-              Front-End React Developer 🤙🏻
-              <span className="text-blue">.</span>
+              <Balancer>
+                Front-End React Developer 🤙🏻
+                <span className="text-blue">.</span>
+              </Balancer>
             </h1>
             <p className="xs:text-center lg:text-left text-lg mt-4 text-gray">
-              Olá, me chamo Vitor Rodrigues. Sou dev front-end desde 2018,
-              apaixonado por interfaces.
+              <Balancer>
+                Olá, me chamo Vitor Rodrigues. Sou dev front-end desde 2018,
+                apaixonado por interfaces.
+              </Balancer>
             </p>
 
             <IconsSection />

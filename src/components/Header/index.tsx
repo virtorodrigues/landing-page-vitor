@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import {
   animationVariantLeftToRight,
   animationVariantRightToLeft,
-} from "@/utils/animations";
+} from "@/utils/AnimationsConst";
 
 export const Header = () => {
   const { theme, setTheme, systemTheme } = useTheme();

@@ -4,7 +4,7 @@ import { igniteTimer, planningPoker, simpleFeed } from "@/portfolioProjects";
 import {
   animationVariantLeftToRight,
   animationVariantRightToLeft,
-} from "@/utils/animations";
+} from "@/utils/AnimationsConst";
 
 export const Portfolio = () => {
   return (

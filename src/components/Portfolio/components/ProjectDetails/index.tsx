@@ -4,7 +4,7 @@ import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { ReactElement } from "react";
-import { animationVariantLeftToRight } from "@/utils/animations";
+import { animationVariantLeftToRight } from "@/utils/AnimationsConst";
 
 interface ProjectDetailsProps {
   name: string;
