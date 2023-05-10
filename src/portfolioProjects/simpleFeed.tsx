@@ -3,15 +3,15 @@ export const simpleFeed = {
   description: (
     <>
       <p>
-        Simple feed é uma aplicação de um feed simples, onde é possível criar,
-        aplaudir e excluir comentários. Esta aplicação é mais voltada para a
-        construção do layout, sem muitas funcionalidades.
+        Simple feed é uma aplicação de um feed simples, onde é possível: criar,
+        aplaudir e excluir comentários. Esta aplicação é voltada para a
+        construção de layout, sem muitas funcionalidades.
       </p>
       <p className="mt-4">
         Com este projeto pude exercitar a construção de layout com{" "}
         <span className="text-blue font-bold">Css Module</span> e{" "}
         <span className="text-blue font-bold">Typescript</span> para facilitar
-        na codificação.
+        na codificação e manutenções posteriores.
       </p>
     </>
   ),

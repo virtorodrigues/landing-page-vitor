@@ -6,19 +6,20 @@ export const igniteTimer = {
       <p className="mt-4">
         Com este projeto pude treinar técnicas de validação de formulário com{" "}
         <span className="text-blue font-bold">zod e react hook forms</span>,
-        aperfeisoar estilização de componentes com{" "}
-        <span className="text-blue font-bold">styled components</span>, como é
+        aperfeiçoar estilização de componentes com{" "}
+        <span className="text-blue font-bold">styled components</span>. Como é
         um projeto simples pude utilizar{" "}
         <span className="text-blue font-bold">ContextApi</span> para gerenciar o
         estado da aplicação juntamente com{" "}
-        <span className="text-blue font-bold">React Reducer</span>, para o
+        <span className="text-blue font-bold">React Reducer</span>. Para o
         gerenciamento de rotas foi utilizado{" "}
         <span className="text-blue font-bold">React router dom</span>, além do{" "}
         <span className="text-blue font-bold">Typescript</span> para facilitar a
         codificação e manutenção da aplicação. O{" "}
         <span className="text-blue font-bold">localStorage</span> foi utilizado
-        para armazenar as informações dos ciclos de tarefas, então vai continuar
-        funcionando normalmente caso você atualize a página.
+        para armazenar as informações dos ciclos de tarefas para então continuar
+        funcionando normalmente caso você atualize a página ou entre em um outro
+        momento.
       </p>
     </>
   ),
