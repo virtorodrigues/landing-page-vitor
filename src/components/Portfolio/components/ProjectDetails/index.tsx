@@ -44,9 +44,9 @@ export function ProjectDetails({
           style={{
             backgroundImage: `url(${backgroundPath})`,
           }}
-          className={`text-blue font-bold rounded-lg flex items-center justify-center bg-cover bg-center hover:cursor-pointer text-5xl`}
+          className={`text-blue font-bold rounded-lg flex items-end justify-center bg-cover bg-center hover:cursor-pointer text-5xl`}
         >
-          <div className="mt-80 w-full dark:bg-gray-dark bg-gray-light text-blue rounded-b-lg text-center text-lg p-2">
+          <div className="mt-64 w-full dark:bg-gray-dark bg-gray-light text-blue rounded-b-lg text-center text-lg p-2">
             ver mais
           </div>
         </motion.div>
