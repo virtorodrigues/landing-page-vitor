@@ -1,6 +1,7 @@
 import { motion, Variants } from "framer-motion";
 import { ProjectDetails } from "./components/ProjectDetails";
 import {
+  igNews,
   igniteTimer,
   newsLetterPage,
   planningPoker,
@@ -46,6 +47,7 @@ export const Portfolio = () => {
             <ProjectDetails {...igniteTimer} />
             <ProjectDetails {...simpleFeed} />
             <ProjectDetails {...planningPoker} />
+            <ProjectDetails {...igNews} />
           </motion.div>
         </motion.div>
       </section>
