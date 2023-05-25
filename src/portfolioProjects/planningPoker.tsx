@@ -1,5 +1,5 @@
 export const planningPoker = {
-  name: "Planning Poker",
+  name: 'Planning Poker',
   description: (
     <>
       <p>
@@ -8,20 +8,20 @@ export const planningPoker = {
       </p>
       <p className="mt-4">
         Com este projeto exercitei bastante as funções real time que o
-        <span className="text-blue font-bold"> Firebase</span> oferece. Foi
-        utilizado <span className="text-blue font-bold">ChakraUI</span> para
-        auxiliar na criação da interface,{" "}
-        <span className="text-blue font-bold">Typescript</span> para facilitar a
-        criação e manutenção do código e utilizei{" "}
-        <span className="text-blue font-bold">Cookies</span> para armazenar o
+        <span className="font-bold text-blue"> Firebase</span> oferece. Foi
+        utilizado <span className="font-bold text-blue">ChakraUI</span> para
+        auxiliar na criação da interface,{' '}
+        <span className="font-bold text-blue">Typescript</span> para facilitar a
+        criação e manutenção do código e utilizei{' '}
+        <span className="font-bold text-blue">Cookies</span> para armazenar o
         nome do usuário, caso ele saia da sala e volte posteriormente ou
         atualize a tela.
       </p>
     </>
   ),
-  videoPath: "planning-poker-video.mp4",
+  videoPath: 'planning-poker-video.mp4',
   githubRepositoryLinkRedirect:
-    "https://github.com/virtorodrigues/planning-poker",
-  onlineLinkRedirect: "https://planning-poker-virtorodrigues.vercel.app/",
-  backgroundPath: "planning-poker-thumb.png",
-};
+    'https://github.com/virtorodrigues/planning-poker',
+  onlineLinkRedirect: 'https://planning-poker-virtorodrigues.vercel.app/',
+  backgroundPath: 'planning-poker-thumb.png',
+}

@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion";
+import { Variants } from 'framer-motion'
 
 export const animationVariantLeftToRight: Variants = {
   offscreen: {
@@ -9,12 +9,12 @@ export const animationVariantLeftToRight: Variants = {
     x: 0,
     opacity: 1,
     transition: {
-      type: "spring",
+      type: 'spring',
       bounce: 0,
       duration: 1,
     },
   },
-};
+}
 
 export const animationVariantRightToLeft: Variants = {
   offscreen: {
@@ -26,9 +26,9 @@ export const animationVariantRightToLeft: Variants = {
     opacity: 1,
 
     transition: {
-      type: "spring",
+      type: 'spring',
       bounce: 0,
       duration: 1,
     },
   },
-};
+}

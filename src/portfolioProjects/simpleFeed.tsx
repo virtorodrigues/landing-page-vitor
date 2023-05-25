@@ -1,5 +1,5 @@
 export const simpleFeed = {
-  name: "Simple Feed",
+  name: 'Simple Feed',
   description: (
     <>
       <p>
@@ -8,15 +8,15 @@ export const simpleFeed = {
         construção de layout, sem muitas funcionalidades.
       </p>
       <p className="mt-4">
-        Com este projeto pude exercitar a construção de layout com{" "}
-        <span className="text-blue font-bold">Css Module</span> e{" "}
-        <span className="text-blue font-bold">Typescript</span> para facilitar
+        Com este projeto pude exercitar a construção de layout com{' '}
+        <span className="font-bold text-blue">Css Module</span> e{' '}
+        <span className="font-bold text-blue">Typescript</span> para facilitar
         na codificação e manutenções posteriores.
       </p>
     </>
   ),
-  videoPath: "simple-feed-video.mp4",
-  githubRepositoryLinkRedirect: "https://github.com/virtorodrigues/simple-feed",
-  onlineLinkRedirect: "https://simple-feed.vercel.app",
-  backgroundPath: "simple-feed-thumb.png",
-};
+  videoPath: 'simple-feed-video.mp4',
+  githubRepositoryLinkRedirect: 'https://github.com/virtorodrigues/simple-feed',
+  onlineLinkRedirect: 'https://simple-feed.vercel.app',
+  backgroundPath: 'simple-feed-thumb.png',
+}

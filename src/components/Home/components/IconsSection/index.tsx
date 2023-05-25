@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { motion } from 'framer-motion'
 
 import {
   faCss3Alt,
@@ -10,12 +10,12 @@ import {
   faLinkedin,
   faReact,
   faWhatsappSquare,
-} from "@fortawesome/free-brands-svg-icons";
-import { SocialMediaLink } from "../SocialMediaLink";
+} from '@fortawesome/free-brands-svg-icons'
+import { SocialMediaLink } from '../SocialMediaLink'
 
 export function IconsSection() {
   return (
-    <nav className="flex items-center xs:space-y-5 lg:space-y-0 mt-8 xs:flex-col lg:flex-row">
+    <nav className="mt-8 flex items-center xs:flex-col xs:space-y-5 lg:flex-row lg:space-y-0">
       <div className="flex items-center justify-center space-x-8">
         <SocialMediaLink
           href="https://www.instagram.com/react.zeiro"
@@ -43,16 +43,16 @@ export function IconsSection() {
       </div>
 
       <motion.span
-        className="w-2 dark:bg-white bg-black rounded-full h-2 xs:mx-0 lg:mx-8"
+        className="h-2 w-2 rounded-full bg-black dark:bg-white xs:mx-0 lg:mx-8"
         animate={{
           scale: [1, 2, 2, 1, 1],
           rotate: [0, 0, 270, 270, 0],
-          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          borderRadius: ['20%', '20%', '50%', '50%', '20%'],
         }}
         transition={{
           repeat: Infinity,
           duration: 3,
-          ease: "linear",
+          ease: 'linear',
         }}
       />
       <div className="flex items-center justify-center space-x-8">
@@ -62,5 +62,5 @@ export function IconsSection() {
         <FontAwesomeIcon icon={faJsSquare} size="2xl" className="text-yellow" />
       </div>
     </nav>
-  );
+  )
 }

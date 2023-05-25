@@ -1,18 +1,18 @@
-import { Variants, motion } from "framer-motion";
-import * as AlertDialog from "@radix-ui/react-alert-dialog";
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { ReactElement } from "react";
-import { animationVariantLeftToRight } from "@/utils/AnimationsConst";
+import { motion } from 'framer-motion'
+import * as AlertDialog from '@radix-ui/react-alert-dialog'
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGlobe, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { ReactElement } from 'react'
+import { animationVariantLeftToRight } from '@/utils/AnimationsConst'
 
 interface ProjectDetailsProps {
-  name: string;
-  description: ReactElement;
-  videoPath: string;
-  githubRepositoryLinkRedirect: string;
-  onlineLinkRedirect: string;
-  backgroundPath: string;
+  name: string
+  description: ReactElement
+  videoPath: string
+  githubRepositoryLinkRedirect: string
+  onlineLinkRedirect: string
+  backgroundPath: string
 }
 
 export function ProjectDetails({
@@ -27,39 +27,39 @@ export function ProjectDetails({
     <AlertDialog.Root>
       <AlertDialog.Trigger asChild>
         <motion.div
-          initial={"offscreen"}
+          initial={'offscreen'}
           whileInView="onscreen"
           variants={animationVariantLeftToRight}
           viewport={{ once: true, amount: 0.05 }}
           whileHover={{
             scale: 1.1,
-            contentVisibility: "visible",
+            contentVisibility: 'visible',
             zIndex: 9999,
           }}
           transition={{
-            type: "spring",
+            type: 'spring',
             stiffness: 800,
             damping: 17,
           }}
           style={{
             backgroundImage: `url(${backgroundPath})`,
           }}
-          className={`text-blue font-bold rounded-lg flex items-end justify-center bg-cover bg-center hover:cursor-pointer text-5xl`}
+          className={`flex items-end justify-center rounded-lg bg-cover bg-center text-5xl font-bold text-blue hover:cursor-pointer`}
         >
-          <div className="mt-64 w-full dark:bg-gray-dark bg-gray-light text-blue rounded-b-lg text-center text-lg p-2">
+          <div className="mt-64 w-full rounded-b-lg bg-gray-light p-2 text-center text-lg text-blue dark:bg-gray-dark">
             ver mais
           </div>
         </motion.div>
       </AlertDialog.Trigger>
       <AlertDialog.Portal>
-        <AlertDialog.Overlay className="h-screen w-screen fixed inset-0 bg-[#00000075] z-[999]" />
-        <AlertDialog.Content className="max-h-full max-w-full overflow-auto xs:w-full lg:max-w-7xl dark:bg-gray-dark bg-white rounded-lg fixed left-2/4 top-2/4 translate-y-[-50%] translate-x-[-50%] p-10 z-[9999]">
+        <AlertDialog.Overlay className="fixed inset-0 z-[999] h-screen w-screen bg-[#00000075]" />
+        <AlertDialog.Content className="fixed left-2/4 top-2/4 z-[9999] max-h-full max-w-full translate-x-[-50%] translate-y-[-50%] overflow-auto rounded-lg bg-white p-10 dark:bg-gray-dark xs:w-full lg:max-w-7xl">
           <AlertDialog.Title className="text-4xl font-bold">
             {name}
           </AlertDialog.Title>
-          <span className="flex h-1 w-32 rounded mt-2 bg-gradient-to-r from-purple to-blue" />
+          <span className="mt-2 flex h-1 w-32 rounded bg-gradient-to-r from-purple to-blue" />
 
-          <AlertDialog.Cancel className="top-6 fixed right-6 leading-none">
+          <AlertDialog.Cancel className="fixed right-6 top-6 leading-none">
             <FontAwesomeIcon
               icon={faXmark}
               size="lg"
@@ -71,21 +71,21 @@ export function ProjectDetails({
               <source src={videoPath} type="video/mp4" />
               Your browser does not support HTML video.
             </video>
-            <div className="xs:mt-12 lg:mt-0 xs:max-h-48 lg:max-h-80 overflow-auto xs-w-auto lg-w-max xs:ml-0 lg:ml-8 text-lg">
+            <div className="xs-w-auto lg-w-max overflow-auto text-lg xs:ml-0 xs:mt-12 xs:max-h-48 lg:ml-8 lg:mt-0 lg:max-h-80">
               {description}
             </div>
           </div>
-          <div className="flex mt-12">
+          <div className="mt-12 flex">
             <a
               href={githubRepositoryLinkRedirect}
               target="_blank"
               rel="noreferrer"
-              className="text-blue transition ease-in delay-70 hover:scale-110 hover:bg-blue hover:text-black font-bold rounded-lg border-2 border-blue px-8 py-2 flex items-center"
+              className="delay-70 flex items-center rounded-lg border-2 border-blue px-8 py-2 font-bold text-blue transition ease-in hover:scale-110 hover:bg-blue hover:text-black"
             >
               <FontAwesomeIcon
                 icon={faGithubAlt}
                 size="lg"
-                className="mr-2 text-inherit"
+                className="text-inherit mr-2"
               />
               Github
             </a>
@@ -93,12 +93,12 @@ export function ProjectDetails({
               href={onlineLinkRedirect}
               target="_blank"
               rel="noreferrer"
-              className="text-blue ml-8 transition ease-in delay-70 hover:scale-110 hover:bg-blue hover:text-black font-bold rounded-lg border-2 border-blue px-8 py-2 flex items-center"
+              className="delay-70 ml-8 flex items-center rounded-lg border-2 border-blue px-8 py-2 font-bold text-blue transition ease-in hover:scale-110 hover:bg-blue hover:text-black"
             >
               <FontAwesomeIcon
                 icon={faGlobe}
                 size="lg"
-                className="mr-2 text-inherit"
+                className="text-inherit mr-2"
               />
               Ver online
             </a>
@@ -106,5 +106,5 @@ export function ProjectDetails({
         </AlertDialog.Content>
       </AlertDialog.Portal>
     </AlertDialog.Root>
-  );
+  )
 }

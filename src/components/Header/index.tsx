@@ -1,21 +1,21 @@
-import { motion } from "framer-motion";
-import { LinkMenu } from "../Home/components/LinkMenu";
-import * as Switch from "@radix-ui/react-switch";
-import { useTheme } from "next-themes";
+import { motion } from 'framer-motion'
+import { LinkMenu } from '../Home/components/LinkMenu'
+import * as Switch from '@radix-ui/react-switch'
+import { useTheme } from 'next-themes'
 import {
   animationVariantLeftToRight,
   animationVariantRightToLeft,
-} from "@/utils/AnimationsConst";
+} from '@/utils/AnimationsConst'
 
 export const Header = () => {
-  const { theme, setTheme, systemTheme } = useTheme();
-  const currentTheme = theme == "system" ? systemTheme : theme;
+  const { theme, setTheme, systemTheme } = useTheme()
+  const currentTheme = theme === 'system' ? systemTheme : theme
 
   function handleSwitchTheme() {
-    if (currentTheme == "dark") {
-      setTheme("light");
+    if (currentTheme === 'dark') {
+      setTheme('light')
     } else {
-      setTheme("dark");
+      setTheme('dark')
     }
   }
 
@@ -25,13 +25,13 @@ export const Header = () => {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
       transition={{
-        type: "spring",
+        type: 'spring',
         duration: 1,
       }}
-      className="dark:bg-black bg-white fixed w-full z-[99] border-b-2 border-blue/50 h-24 xs:px-8 lg:px-24 py-8 flex flex-row justify-between items-center"
+      className="fixed z-[99] flex h-24 w-full flex-row items-center justify-between border-b-2 border-blue/50 bg-white py-8 dark:bg-black xs:px-8 lg:px-24"
     >
       <motion.div variants={animationVariantLeftToRight}>
-        <h1 className="font-bold xs:text-xl lg:text-2xl text-blue">
+        <h1 className="font-bold text-blue xs:text-xl lg:text-2xl">
           Vitor Rodrigues
         </h1>
       </motion.div>
@@ -46,11 +46,11 @@ export const Header = () => {
 
         <Switch.Root
           onClick={handleSwitchTheme}
-          className=" w-[42px] h-[25px] bg-blac rounded-full relative dark:bg-white bg-black data-[state=checked]:bg-black dark:data-[state=checked]:bg-white cursor-pointer"
+          className=" bg-blac relative h-[25px] w-[42px] cursor-pointer rounded-full bg-black data-[state=checked]:bg-black dark:bg-white dark:data-[state=checked]:bg-white"
         >
-          <Switch.Thumb className="shadow-[0_2px_2px] transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px] block w-[21px] h-[21px] rounded-full dark:bg-black bg-white dark:data-[state=checked]:bg-black data-[state=checked]:bg-white" />
+          <Switch.Thumb className="block h-[21px] w-[21px] translate-x-0.5 rounded-full bg-white shadow-[0_2px_2px] transition-transform duration-100 will-change-transform data-[state=checked]:translate-x-[19px] data-[state=checked]:bg-white dark:bg-black dark:data-[state=checked]:bg-black" />
         </Switch.Root>
       </motion.div>
     </motion.header>
-  );
-};
+  )
+}

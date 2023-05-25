@@ -1,6 +1,6 @@
-export { igniteTimer } from "./igniteTimer";
-export { planningPoker } from "./planningPoker";
-export { simpleFeed } from "./simpleFeed";
-export { newsLetterPage } from "./newsLetterPage";
-export { igNews } from "./igNews";
-export { spacetime } from "./spacetime";
+export { igniteTimer } from './igniteTimer'
+export { planningPoker } from './planningPoker'
+export { simpleFeed } from './simpleFeed'
+export { newsLetterPage } from './newsLetterPage'
+export { igNews } from './igNews'
+export { spacetime } from './spacetime'

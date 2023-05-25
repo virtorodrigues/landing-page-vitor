@@ -1,5 +1,5 @@
-import { motion, Variants } from "framer-motion";
-import { ProjectDetails } from "./components/ProjectDetails";
+import { motion } from 'framer-motion'
+import { ProjectDetails } from './components/ProjectDetails'
 import {
   igNews,
   igniteTimer,
@@ -7,17 +7,15 @@ import {
   planningPoker,
   simpleFeed,
   spacetime,
-} from "@/portfolioProjects";
-import {
-  animationVariantLeftToRight,
-} from "@/utils/AnimationsConst";
+} from '@/portfolioProjects'
+import { animationVariantLeftToRight } from '@/utils/AnimationsConst'
 
 export const Portfolio = () => {
   return (
     <>
       <section
         id="portfolio"
-        className="max-w-[var(--max-width-screen)] z-[100] min-h-screen pb-24"
+        className="z-[100] min-h-screen max-w-[var(--max-width-screen)] pb-24"
       >
         <motion.div
           initial="offscreen"
@@ -35,13 +33,13 @@ export const Portfolio = () => {
           >
             Projetos
           </motion.h1>
-          <span className="h-1 w-32 rounded mt-2 bg-gradient-to-r from-purple to-blue" />
+          <span className="mt-2 h-1 w-32 rounded bg-gradient-to-r from-purple to-blue" />
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
             variants={animationVariantLeftToRight}
             viewport={{ once: true, amount: 0 }}
-            className="xs:mt-12 lg:mt-24 grid xs:grid-cols-1 lg:grid-cols-3 gap-12  w-full auto-rows-[minmax(300px,_300px)]"
+            className="grid w-full auto-rows-[minmax(300px,_300px)] gap-12 xs:mt-12 xs:grid-cols-1  lg:mt-24 lg:grid-cols-3"
           >
             <ProjectDetails {...newsLetterPage} />
             <ProjectDetails {...igniteTimer} />
@@ -53,5 +51,5 @@ export const Portfolio = () => {
         </motion.div>
       </section>
     </>
-  );
-};
+  )
+}

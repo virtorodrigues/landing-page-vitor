@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
 export function AnimationSVG() {
   return (
@@ -172,7 +172,7 @@ export function AnimationSVG() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "linear",
+            ease: 'linear',
           }}
           id="pulse-1"
           gradientUnits="userSpaceOnUse"
@@ -415,5 +415,5 @@ export function AnimationSVG() {
         </linearGradient>
       </defs>
     </svg>
-  );
+  )
 }
