@@ -6,10 +6,10 @@ import {
   newsLetterPage,
   planningPoker,
   simpleFeed,
+  spacetime,
 } from "@/portfolioProjects";
 import {
   animationVariantLeftToRight,
-  animationVariantRightToLeft,
 } from "@/utils/AnimationsConst";
 
 export const Portfolio = () => {
@@ -48,6 +48,7 @@ export const Portfolio = () => {
             <ProjectDetails {...simpleFeed} />
             <ProjectDetails {...planningPoker} />
             <ProjectDetails {...igNews} />
+            <ProjectDetails {...spacetime} />
           </motion.div>
         </motion.div>
       </section>
