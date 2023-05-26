@@ -15,7 +15,7 @@ export const Portfolio = () => {
     <>
       <section
         id="portfolio"
-        className="z-[100] min-h-screen max-w-[var(--max-width-screen)] pb-24"
+        className="z-[999] min-h-screen max-w-[var(--max-width-screen)] pb-24"
       >
         <motion.div
           initial="offscreen"

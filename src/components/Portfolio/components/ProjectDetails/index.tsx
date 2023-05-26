@@ -52,8 +52,8 @@ export function ProjectDetails({
         </motion.div>
       </AlertDialog.Trigger>
       <AlertDialog.Portal>
-        <AlertDialog.Overlay className="fixed inset-0 z-[999] h-screen w-screen bg-[#00000075]" />
-        <AlertDialog.Content className="fixed left-2/4 top-2/4 z-[9999] max-h-full max-w-full translate-x-[-50%] translate-y-[-50%] overflow-auto rounded-lg bg-white p-10 dark:bg-gray-dark xs:w-full lg:max-w-7xl">
+        <AlertDialog.Overlay className="fixed inset-0 z-[99999] h-screen w-screen bg-[#00000075]" />
+        <AlertDialog.Content className="fixed left-2/4 top-2/4 z-[999999] max-h-full max-w-full translate-x-[-50%] translate-y-[-50%] overflow-auto rounded-lg bg-white p-10 dark:bg-gray-dark xs:w-full lg:max-w-7xl">
           <AlertDialog.Title className="text-4xl font-bold">
             {name}
           </AlertDialog.Title>

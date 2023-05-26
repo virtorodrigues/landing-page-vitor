@@ -12,7 +12,7 @@ export const Home = () => {
     <>
       <section
         id="home"
-        className="z-[100] h-screen max-w-[var(--max-width-screen)]"
+        className="z-[999] h-screen max-w-[var(--max-width-screen)]"
       >
         <div className="h-24" />
         <motion.div

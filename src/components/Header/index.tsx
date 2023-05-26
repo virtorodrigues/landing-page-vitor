@@ -28,7 +28,7 @@ export const Header = () => {
         type: 'spring',
         duration: 1,
       }}
-      className="fixed z-[99] flex h-24 w-full flex-row items-center justify-between border-b-2 border-blue/50 bg-white py-8 dark:bg-black xs:px-8 lg:px-24"
+      className="fixed z-[99999] flex h-24 w-full flex-row items-center justify-between border-b-2 border-blue/50 bg-white py-8 dark:bg-black xs:px-8 lg:px-24"
     >
       <motion.div variants={animationVariantLeftToRight}>
         <h1 className="font-bold text-blue xs:text-xl lg:text-2xl">
