@@ -21,10 +21,10 @@ export const Portfolio = () => {
           initial="offscreen"
           whileInView="onscreen"
           variants={animationVariantLeftToRight}
-          viewport={{ once: true, amount: 0 }}
+          viewport={{ once: true, amount: 0.02 }}
           className="flex flex-col items-start pt-8"
         >
-          <motion.h1 className="text-6xl font-bold">Projetos</motion.h1>
+          <h1 className="text-6xl font-bold">Projetos</h1>
           <span className="mt-2 h-1 w-32 rounded bg-gradient-to-r from-purple to-blue" />
           <motion.div
             initial="offscreen"
