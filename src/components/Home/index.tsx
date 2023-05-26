@@ -46,9 +46,9 @@ export const Home = () => {
           </motion.div>
 
           <motion.img
-            className="rounded-full xs:h-72 xs:pl-0 lg:h-96 lg:pl-12"
+            className="aspect-square rounded-full object-cover xs:h-72 lg:h-96"
             variants={animationVariantRightToLeft}
-            src="/vitor-rodrigues.jpg"
+            src="/vitor-rodrigues.jpeg"
             alt="Minha foto"
           />
         </motion.div>
