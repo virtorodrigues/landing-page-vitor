@@ -49,7 +49,7 @@ export const Header = () => {
   function LanguageContent({ lang }: { lang: Language }) {
     return (
       <div className="flex items-center gap-2">
-        <Image src={`/${lang}.png`} width={24} height={24} alt="" />{' '}
+        <Image src={`/${lang}.png`} width={24} height={12} alt="" />{' '}
         <span className="text-base">{lang}</span>
       </div>
     )
@@ -94,7 +94,7 @@ export const Header = () => {
             </Menubar.Trigger>
             <Menubar.Portal>
               <Menubar.Content
-                className="z-[99999] rounded-md bg-gray-light py-2 will-change-[transform,opacity] [animation-duration:_400ms] [animation-timing-function:_cubic-bezier(0.16,_1,_0.3,_1)] dark:bg-gray-dark"
+                className="z-[99999] rounded-md bg-gray-light p-3 px-5 will-change-[transform,opacity] [animation-duration:_400ms] [animation-timing-function:_cubic-bezier(0.16,_1,_0.3,_1)] dark:bg-gray-dark md:px-5 md:py-2"
                 align="start"
                 sideOffset={5}
                 alignOffset={-14}
@@ -105,7 +105,7 @@ export const Header = () => {
                 >
                   {RADIO_ITEMS.map((item) => (
                     <Menubar.RadioItem
-                      className="relative flex h-[25px] select-none items-center rounded p-4 leading-none outline-none hover:cursor-pointer data-[disabled]:pointer-events-none data-[highlighted]:text-gray"
+                      className="relative flex h-10 select-none items-center rounded leading-none outline-none hover:cursor-pointer data-[disabled]:pointer-events-none data-[highlighted]:text-gray"
                       key={item}
                       value={item}
                     >
