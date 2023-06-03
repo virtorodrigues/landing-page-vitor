@@ -49,7 +49,7 @@ export const Header = () => {
   function LanguageContent({ lang }: { lang: Language }) {
     return (
       <div className="flex items-center gap-2">
-        <Image src={`/${lang}.png`} width={24} height={12} alt="" />{' '}
+        <Image src={`/${lang}.png`} width={28} height={18} alt="" />{' '}
         <span className="text-base">{lang}</span>
       </div>
     )
