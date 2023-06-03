@@ -12,7 +12,7 @@ interface SocialMediaLinkProps {
 
 export function SocialMediaLink({ icon, href, color }: SocialMediaLinkProps) {
   return (
-    <Link href={href} target="_blank" rel="noreferrer">
+    <Link href={href} target="_blank" rel="noreferrer" title={href}>
       <motion.div
         whileHover={{ scale: 1.3, rotate: 45 }}
         whileTap={{ scale: 0.9 }}

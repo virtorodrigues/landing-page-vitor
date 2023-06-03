@@ -1,39 +1,31 @@
-import { ReactNode, createContext, useState, useEffect } from 'react'
+import { EN, PT } from '@/constants/language'
+import { ReactNode, createContext, useState } from 'react'
 
-interface ThemeContextType {
-  theme: string
-  setTheme: (data: string) => void
+type Language = typeof PT | typeof EN
+
+interface LanguageContextType {
+  language: Language
+  setLanguage: (data: Language) => void
 }
 
-export const ThemeContext = createContext({} as ThemeContextType)
+export const LanguageContext = createContext({} as LanguageContextType)
 
-interface ThemeContextProviderProps {
+interface LanguageContextProviderProps {
   children: ReactNode
 }
 
-export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState('dark')
+export function LanguageContextProvider({
+  children,
+}: LanguageContextProviderProps) {
+  const [language, setLanguage] = useState<Language>(EN)
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const themeJSON = JSON.stringify(theme)
-
-      localStorage.setItem('@landing-page-vitor:theme-state-1.0.0', themeJSON)
-
-      document.documentElement.classList.add(theme)
-    }
-  }, [theme])
-
-  function onSetTheme(newTheme: string) {
-    setTheme(newTheme)
-    document.documentElement.classList.remove(theme)
-
-    document.documentElement.classList.add(newTheme)
+  function onSetLanguage(newLanguage: Language) {
+    setLanguage(newLanguage)
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme: onSetTheme }}>
+    <LanguageContext.Provider value={{ language, setLanguage: onSetLanguage }}>
       {children}
-    </ThemeContext.Provider>
+    </LanguageContext.Provider>
   )
 }

@@ -9,8 +9,11 @@ import {
   spacetime,
 } from '@/portfolioProjects'
 import { animationVariantLeftToRight } from '@/utils/AnimationsConst'
+import { useTranslator } from '@/hooks/useTranslator'
 
 export const Portfolio = () => {
+  const projectsText = useTranslator().projecsSectionTitle
+
   return (
     <>
       <section
@@ -24,14 +27,14 @@ export const Portfolio = () => {
           viewport={{ once: true, amount: 0.02 }}
           className="flex flex-col items-start pt-8"
         >
-          <h1 className="text-6xl font-bold">Projetos</h1>
+          <h1 className="text-6xl font-bold">{projectsText}</h1>
           <span className="mt-2 h-1 w-32 rounded bg-gradient-to-r from-purple to-blue" />
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
             variants={animationVariantLeftToRight}
             viewport={{ once: true, amount: 0 }}
-            className="grid w-full auto-rows-[minmax(300px,_300px)] gap-12 xs:mt-12 xs:grid-cols-1  lg:mt-24 lg:grid-cols-3"
+            className="grid w-full auto-rows-[minmax(300px,_300px)] gap-12 xs:mt-12 xs:grid-cols-1 lg:mt-14 lg:grid-cols-3"
           >
             <ProjectDetails {...newsLetterPage} />
             <ProjectDetails {...igniteTimer} />

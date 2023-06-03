@@ -56,10 +56,30 @@ export function IconsSection() {
         }}
       />
       <div className="flex items-center justify-center space-x-8">
-        <FontAwesomeIcon icon={faCss3Alt} size="2xl" className="text-blue/80" />
-        <FontAwesomeIcon icon={faHtml5} size="2xl" className="text-orange" />
-        <FontAwesomeIcon icon={faReact} size="2xl" className="text-blue" />
-        <FontAwesomeIcon icon={faJsSquare} size="2xl" className="text-yellow" />
+        <FontAwesomeIcon
+          icon={faCss3Alt}
+          size="2xl"
+          className="text-blue/80"
+          title="CSS3"
+        />
+        <FontAwesomeIcon
+          icon={faHtml5}
+          size="2xl"
+          className="text-orange"
+          title="HTML5"
+        />
+        <FontAwesomeIcon
+          icon={faReact}
+          size="2xl"
+          className="text-blue"
+          title="React.js"
+        />
+        <FontAwesomeIcon
+          icon={faJsSquare}
+          size="2xl"
+          className="text-yellow"
+          title="JS"
+        />
       </div>
     </nav>
   )

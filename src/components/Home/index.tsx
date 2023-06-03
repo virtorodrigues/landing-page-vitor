@@ -6,8 +6,11 @@ import {
 } from '@/utils/AnimationsConst'
 import { Balancer } from 'react-wrap-balancer'
 import { AnimationSVG } from '@/utils/AnimationSVG'
+import { useTranslator } from '@/hooks/useTranslator'
 
 export const Home = () => {
+  const aboutMeText = useTranslator().aboutMe
+
   return (
     <>
       <section
@@ -36,10 +39,7 @@ export const Home = () => {
               </Balancer>
             </h1>
             <p className="mt-4 text-lg text-gray xs:text-center lg:text-left">
-              <Balancer>
-                Olá, me chamo Vitor Rodrigues. Sou dev front-end desde 2018,
-                apaixonado por interfaces.
-              </Balancer>
+              <Balancer>{aboutMeText}</Balancer>
             </p>
 
             <IconsSection />

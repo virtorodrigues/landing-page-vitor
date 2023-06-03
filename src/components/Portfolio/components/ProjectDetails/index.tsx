@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { ReactElement } from 'react'
 import { animationVariantLeftToRight } from '@/utils/AnimationsConst'
+import { useTranslator } from '@/hooks/useTranslator'
 
 interface ProjectDetailsProps {
   name: string
@@ -23,6 +24,10 @@ export function ProjectDetails({
   onlineLinkRedirect,
   backgroundPath,
 }: ProjectDetailsProps) {
+  const translator = useTranslator()
+  const learnMore = translator.learnMore
+  const seeItOnlineText = translator.seeItOnline
+
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger asChild>
@@ -47,7 +52,7 @@ export function ProjectDetails({
           className={`flex items-end justify-center rounded-lg bg-cover bg-center text-5xl font-bold text-blue hover:cursor-pointer`}
         >
           <div className="mt-64 w-full rounded-b-lg bg-gray-light p-2 text-center text-lg text-blue dark:bg-gray-dark">
-            ver mais
+            {learnMore}
           </div>
         </motion.div>
       </AlertDialog.Trigger>
@@ -100,7 +105,7 @@ export function ProjectDetails({
                 size="lg"
                 className="text-inherit mr-2"
               />
-              Ver online
+              {seeItOnlineText}
             </a>
           </div>
         </AlertDialog.Content>
