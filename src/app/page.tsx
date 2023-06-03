@@ -20,8 +20,8 @@ export default function App() {
           <Header />
         </ThemeProvider>
         <Home />
+        <Portfolio />
       </LanguageContextProvider>
-      <Portfolio />
     </main>
   )
 }

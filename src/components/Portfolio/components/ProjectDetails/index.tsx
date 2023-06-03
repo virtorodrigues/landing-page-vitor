@@ -25,6 +25,7 @@ export function ProjectDetails({
   backgroundPath,
 }: ProjectDetailsProps) {
   const translator = useTranslator()
+  console.log(translator)
   const learnMore = translator.learnMore
   const seeItOnlineText = translator.seeItOnline
 
