@@ -39,7 +39,7 @@ export const Home = () => {
               </Balancer>
             </h1>
             <p className="mt-4 text-lg text-gray xs:text-center lg:text-left">
-              <Balancer>{aboutMeText}</Balancer>
+              {aboutMeText}
             </p>
 
             <IconsSection />
