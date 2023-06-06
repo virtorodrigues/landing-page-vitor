@@ -37,11 +37,11 @@ export const Portfolio = () => {
             className="grid w-full auto-rows-[minmax(300px,_300px)] gap-12 xs:mt-12 xs:grid-cols-1 lg:mt-14 lg:grid-cols-3"
           >
             <ProjectDetails {...newsLetterPage} />
+            <ProjectDetails {...spacetime} />
             <ProjectDetails {...igniteTimer} />
             <ProjectDetails {...simpleFeed} />
             <ProjectDetails {...planningPoker} />
             <ProjectDetails {...igNews} />
-            <ProjectDetails {...spacetime} />
           </motion.div>
         </motion.div>
       </section>
