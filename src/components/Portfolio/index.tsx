@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ProjectDetails } from './components/ProjectDetails'
 import {
+  commerce,
   igNews,
   igniteTimer,
   newsLetterPage,
@@ -36,6 +37,7 @@ export const Portfolio = () => {
             viewport={{ once: true, amount: 0 }}
             className="grid w-full auto-rows-[minmax(300px,_300px)] gap-12 xs:mt-12 xs:grid-cols-1 lg:mt-14 lg:grid-cols-3"
           >
+            <ProjectDetails {...commerce} />
             <ProjectDetails {...newsLetterPage} />
             <ProjectDetails {...spacetime} />
             <ProjectDetails {...igniteTimer} />
