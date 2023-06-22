@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://landing-page-vitor.vercel.app
+
+# Sitemaps
+Sitemap: https://landing-page-vitor.vercel.app/sitemap.xml
