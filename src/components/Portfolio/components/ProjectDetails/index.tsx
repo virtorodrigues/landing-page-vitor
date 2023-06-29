@@ -3,13 +3,13 @@ import * as AlertDialog from '@radix-ui/react-alert-dialog'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { ReactElement } from 'react'
 import { animationVariantLeftToRight } from '@/utils/AnimationsConst'
 import { useTranslator } from '@/hooks/useTranslator'
+import { portfolio } from '@/utils/PortfolioConst'
+import { ProjectPathNameType } from '@/types/projectTranslate'
 
 interface ProjectDetailsProps {
   name: string
-  description: ReactElement
   videoPath: string
   githubRepositoryLinkRedirect: string
   onlineLinkRedirect: string
@@ -18,7 +18,6 @@ interface ProjectDetailsProps {
 
 export function ProjectDetails({
   name,
-  description,
   videoPath,
   githubRepositoryLinkRedirect,
   onlineLinkRedirect,
@@ -27,6 +26,11 @@ export function ProjectDetails({
   const translator = useTranslator()
   const learnMore = translator.learnMore
   const seeItOnlineText = translator.seeItOnline
+
+  const projectName = portfolio.find((p) => p.index === name)
+
+  const { description } =
+    translator.projects?.[projectName?.value as ProjectPathNameType]
 
   return (
     <AlertDialog.Root>
