@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://landing-page-vitor.vercel.app
+Host: https://vitorrodrigues.vercel.app/
 
 # Sitemaps
-Sitemap: https://landing-page-vitor.vercel.app/sitemap.xml
+Sitemap: https://vitorrodrigues.vercel.app/sitemap.xml
