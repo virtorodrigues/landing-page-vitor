@@ -14,8 +14,8 @@ export const en: TranslateProps = {
           <p>
             In this mini e-commerce you can filter the products, view more
             details and clicking buy will be redirected to WhatsApp directly in
-            the seller`&apos;`s conversation with the product information
-            already fulfilled.
+            the seller&apos;s conversation with the product information already
+            fulfilled.
           </p>
           <p className="mt-4">
             This project was created using{' '}
@@ -41,7 +41,7 @@ export const en: TranslateProps = {
           <p className="mt-4">
             This project was created using{' '}
             <span className="font-bold text-blue">NextJs</span>. to create the
-            inscriptions were used: o{' '}
+            inscriptions were used:{' '}
             <span className="font-bold text-blue">Stripe</span> as a means of
             payment, he works with{' '}
             <span className="font-bold text-blue">Webhooks</span> so if the user
@@ -50,7 +50,7 @@ export const en: TranslateProps = {
             <span className="font-bold text-blue">FaunaDB</span> was used as a
             database to store user data and enrollment. For the creation of the
             news was used <span className="font-bold text-blue">Prismic</span>{' '}
-            as a CMS. A application also has an authentication system with the
+            as a CMS. The application also has an authentication system with the
             github using <span className="font-bold text-blue">Nextauth</span>{' '}
             for this.
           </p>
@@ -69,15 +69,15 @@ export const en: TranslateProps = {
             </span>
             , improve component styling with{' '}
             <span className="font-bold text-blue">styled components</span>. As
-            It`&apos;`s a simple project I could use{' '}
+            It&apos;s a simple project I could use{' '}
             <span className="font-bold text-blue">ContextApi</span> for manage
             application state together with{' '}
             <span className="font-bold text-blue">React Reducer</span>. For the
             route management was used{' '}
             <span className="font-bold text-blue">React router dom</span>, plus
             from <span className="font-bold text-blue">Typescript</span> to
-            facilitate application coding and maintenance. O{' '}
-            <span className="font-bold text-blue">localStorage</span> was used
+            facilitate application coding and maintenance.{' '}
+            <span className="font-bold text-blue">LocalStorage</span> was used
             to store task cycle information for then continue working normally
             if you refresh the page or enter another time.
           </p>
@@ -99,8 +99,8 @@ export const en: TranslateProps = {
             <span className="font-bold text-blue">Zod</span>. all part of
             responsiveness and page styling, was done with great care using the{' '}
             <span className="font-bold text-blue">Tailwindcss</span> which is
-            now recommended by NextJs. When filling out the form, a simulation
-            for registration and a toast using{' '}
+            now recommended by NextJs. When filling out the form, the simulation
+            for registration and a toast is using{' '}
             <span className="font-bold text-blue">React Toastify</span> appears
             on screen, showing the user the success of the registration.
           </p>
@@ -116,7 +116,7 @@ export const en: TranslateProps = {
           </p>
           <p className="mt-4">
             With this project I exercised a lot the real time functions that the
-            <span className="font-bold text-blue"> Firebase</span> delivers. He
+            <span className="font-bold text-blue"> Firebase</span> delivers. It
             was used <span className="font-bold text-blue">ChakraUI</span> to
             help in creating the interface,{' '}
             <span className="font-bold text-blue">Typescript</span> for
@@ -138,7 +138,7 @@ export const en: TranslateProps = {
           </p>
           <p className="mt-4">
             With this project I was able to exercise the layout construction
-            with <span className="font-bold text-blue">Css Module</span> e{' '}
+            with <span className="font-bold text-blue">Css Module</span> and{' '}
             <span className="font-bold text-blue">Typescript</span> for
             facilitate coding and subsequent maintenance.
           </p>
@@ -167,13 +167,13 @@ export const en: TranslateProps = {
             facilitate future maintenance.
           </p>
           <p className="mt-4">
-            In this project I had legal challenges integrating all services. O
-            backend is being hosted with{' '}
+            In this project I had a great challenges integrating all services.
+            The backend is being hosted with{' '}
             <span className="font-bold text-blue">Heroku</span>, frontend is
             hosted at <span className="font-bold text-blue">Vercel</span>,
             database is in{' '}
             <span className="font-bold text-blue">PlanetScale</span> and
-            I`&apos;`m using the service of{' '}
+            I&apos;m using the service of{' '}
             <span className="font-bold text-blue">AWS Bucket</span> for store
             application images. In addition to authentication oauth with{' '}
             <span className="font-bold text-blue">Google</span> and{' '}
