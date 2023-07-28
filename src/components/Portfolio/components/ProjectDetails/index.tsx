@@ -1,12 +1,13 @@
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import * as AlertDialog from '@radix-ui/react-alert-dialog'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { animationVariantLeftToRight } from '@/utils/AnimationsConst'
+// import { animationVariantLeftToRight } from '@/utils/AnimationsConst'
 import { useTranslator } from '@/hooks/useTranslator'
 import { portfolio } from '@/utils/PortfolioConst'
 import { ProjectPathNameType } from '@/types/projectTranslate'
+import Image from 'next/image'
 
 interface ProjectDetailsProps {
   name: string
@@ -24,7 +25,7 @@ export function ProjectDetails({
   backgroundPath,
 }: ProjectDetailsProps) {
   const translator = useTranslator()
-  const learnMore = translator.learnMore
+  /// /const learnMore = translator.learnMore
   const seeItOnlineText = translator.seeItOnline
 
   const projectName = portfolio.find((p) => p.index === name)
@@ -35,7 +36,20 @@ export function ProjectDetails({
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger asChild>
-        <motion.div
+        <picture className="max-h-52 cursor-pointer rounded-lg">
+          <Image
+            className="h-52 w-full object-contain duration-200 hover:scale-95"
+            width={600}
+            height={200}
+            src={`/${backgroundPath}`}
+            alt=""
+            quality={90}
+          />
+          {/* <div className="absolute bottom-[-2px] w-full bg-gray-light p-2 text-center text-lg dark:bg-gray-dark dark:text-blue">
+            {learnMore}
+          </div> */}
+        </picture>
+        {/* <motion.div
           initial={'offscreen'}
           whileInView="onscreen"
           variants={animationVariantLeftToRight}
@@ -58,7 +72,7 @@ export function ProjectDetails({
           <div className="mt-64 w-full rounded-b-lg bg-gray-light p-2 text-center text-lg text-blue dark:bg-gray-dark">
             {learnMore}
           </div>
-        </motion.div>
+        </motion.div> */}
       </AlertDialog.Trigger>
       <AlertDialog.Portal>
         <AlertDialog.Overlay className="fixed inset-0 z-[99999] h-screen w-screen bg-[#00000075]" />

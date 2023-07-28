@@ -35,7 +35,7 @@ export const Portfolio = () => {
             whileInView="onscreen"
             variants={animationVariantLeftToRight}
             viewport={{ once: true, amount: 0 }}
-            className="grid w-full auto-rows-[minmax(300px,_300px)] gap-12 xs:mt-12 xs:grid-cols-1 lg:mt-14 lg:grid-cols-3"
+            className="mt-12 grid w-full auto-rows-[minmax(0px,_250px)] grid-cols-1 gap-5 lg:mt-14 lg:grid-cols-3"
           >
             <ProjectDetails {...commerce} />
             <ProjectDetails {...newsLetterPage} />
